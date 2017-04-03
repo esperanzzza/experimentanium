@@ -56,6 +56,13 @@ gulp.task('browser-sync', function() {
     });
 });
 
+gulp.task('scripts', function() {
+    return gulp.src('app/libs/jquery-3.1.1.min.js')
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'));
+});
+
 gulp.task('bs-reload', function() {
     browserSync.reload();
 });

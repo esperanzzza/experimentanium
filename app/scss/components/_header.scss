@@ -8,7 +8,7 @@
          justify-content: space-between;
          align-items: center;
      }
-     
+
      &__logo {
          width: 325px;
          display: flex;
@@ -33,14 +33,14 @@
          margin-bottom: 15px;
      }
 
-     &__search input[type="search"] {
+     &__search[type="search"] {
          background: transparent;
          border: none;
          border-bottom: 1px solid transparent;
          outline: none;
 
-     &:hover, 
-     &:focus 	{
+     &:hover,
+     &:focus {
      	border-bottom: 1px solid $color-lilac;
      }
      }
@@ -50,17 +50,25 @@
      }
 
      &__language {
+     	 position: relative;
          display: flex;
          justify-content: space-between;
          align-items: center;
      }
+     &__language-choice-list {
+     	position: absolute;
+     	top: -10px;
+     	display: none;
+     }
 
      &__language-choice {
-         display: none;
-         margin-right: 12px;
+        margin-right: 12px;
+        text-transform: uppercase;
 
          &--default {
              display: block;
+             margin-right: 12px;
+        	 text-transform: uppercase;
          }
      }
  }
