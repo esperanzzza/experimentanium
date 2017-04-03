@@ -1,0 +1,114 @@
+/*------------------------------------*\
+  Body styles
+\*------------------------------------*/
+
+body {
+    font-family: $font-family--base;
+    font-size: $font-size--base;
+    font-stretch: normal;
+    font-weight: 400;
+    font-style: normal;
+    line-height: normal;
+    color: $color-black;
+    background-color: $color-white;
+}
+
+
+/*------------------------------------*\
+  Body background 
+\*------------------------------------*/
+
+.background-wrapper {
+    background: url('../img/background-main.jpg') center no-repeat;
+    width: 1366px;
+    height: 1060px;
+}
+
+
+/*------------------------------------*\
+  Main styles
+\*------------------------------------*/
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 143px;
+    padding: 14px 0;
+    color: $color-lilac;
+    border: solid 3px $color-lilac;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+
+/*------------------------------------*\
+  Sweep to Bottom
+\*------------------------------------*/
+
+.hvr-sweep-to-bottom {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.hvr-sweep-to-bottom:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-lilac;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.hvr-sweep-to-bottom:hover,
+.hvr-sweep-to-bottom:focus,
+.hvr-sweep-to-bottom:active {
+    color: white;
+}
+
+.hvr-sweep-to-bottom:hover:before,
+.hvr-sweep-to-bottom:focus:before,
+.hvr-sweep-to-bottom:active:before {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
