@@ -15,7 +15,7 @@
 <body>
     <div class="background-wrapper">
         <header class="header">
-            <div class="header__functions">
+            <div class="header__top">
                 <form class="header__search-form" action="/echo" method="get">
                     <input type="search" class="header__search" name="search" id="search">
                     <label for="search"></label>
@@ -30,12 +30,12 @@
                     <li><span class="header__language-choice header__language-choice--eng">Eng</span></li>
                     <li><span class="header__language-choice header__language-choice--ukr">Укр</span></li>
                     </ul>
-                    <svg class="header__down-icon header__down-icon--js" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" width="11" height="6" viewBox="0 0 11 6">
-                        <image xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAGCAMAAAAi7JTKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAUVBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcqRVCAAAAGnRSTlMAqhgFkbL6HtzWb/5UKPGmOXtHcCDs5D+iI4WF40sAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAN0lEQVQI12NgZGKAAGYWBlY2dgiTg5OBgYubB8jk5eMHiQhICTIISQlDVIqIikmJM8CAhCSIBAAuEAGXIS7EzQAAAABJRU5ErkJggg==" width="11" height="6" />
-                    </svg>
+                    <div class="header__down-icon header__down-icon--js">
+                   <img src="img/down-icon.svg" alt="Down icon">
+                   </div>
                 </div>
             </div>
-            <div class="header__flex-container">
+            <div class="header__container">
                 <div class="header__logo">
                     <img class="header__logo-image" src="img/logo.png" alt="Logo">
                     <div class="header__logo-text">
@@ -43,31 +43,31 @@
                         <p>Музей популярної науки і техніки</p>
                     </div>
                 </div>
-                <nav class="header__nav main-nav">
-                    <ul class="main-nav__main-navigation">
-                        <li class="main-nav__main-navigation-item"><a class="main-nav__main-navigation-link" href="#">Головна</a></li>
-                        <li class="main-nav__main-navigation-item">
-                            <a class="main-nav__main-navigation-link main-nav__main-navigation-link--submenu" href="#">Експозиція та шоу</a>
+                <nav class="main-nav">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__list-item"><a class="main-nav__link" href="#">Головна</a></li>
+                        <li class="main-nav__list-item">
+                            <a class="main-nav__link main-nav__link--submenu" href="#">Експозиція та шоу</a>
                             <ul class="main-nav__submenu-one">
-                                <li><a class="main-nav__main-navigation-link" href="#">Шоу в музеї</a></li>
+                                <li><a class="main-nav__link" href="#">Шоу в музеї</a></li>
                                 <li>
-                                    <a class="main-nav__main-navigation-link main-nav__main-navigation-link--submenu" href="#">Події та лекції</a>
+                                    <a class="main-nav__link main-nav__link--submenu" href="#">Події та лекції</a>
                                     <ul class="main-nav__submenu-two">
-                                        <li class="main-nav__main-navigation-item"><a class="main-nav__main-navigation-link" href="#">Каталог подій</a></li>
-                                        <li class="main-nav__main-navigation-item"><a class="main-nav__main-navigation-link" href="#">Архів подій</a></li>
+                                        <li class="main-nav__list-item"><a class="main-nav__link" href="#">Каталог подій</a></li>
+                                        <li class="main-nav__list-item"><a class="main-nav__link" href="#">Архів подій</a></li>
                                     </ul>
                                 </li>
-                                <li><a class="main-nav__main-navigation-link" href="#">Виїздні шоу</a></li>
-                                <li><a class="main-nav__main-navigation-link" href="#">3d тур</a></li>
+                                <li><a class="main-nav__link" href="#">Виїздні шоу</a></li>
+                                <li><a class="main-nav__link" href="#">3d тур</a></li>
                             </ul>
                         </li>
-                        <li class="main-nav__main-navigation-item"><a class="main-nav__main-navigation-link" href="#">Новини</a>
-                            <li class="main-nav__main-navigation-item"><a class="main-nav__main-navigation-link" href="#">Освітні програми</a>
-                                <li class="main-nav__main-navigation-item"><a class="main-nav__main-navigation-link" href="#">Організація свят</a>
-                                    <li class="main-nav__main-navigation-item"><a class="main-nav__main-navigation-link" href="#">Про нас</a>
+                        <li class="main-nav__list-item"><a class="main-nav__link" href="#">Новини</a>
+                            <li class="main-nav__list-item"><a class="main-nav__link" href="#">Освітні програми</a>
+                                <li class="main-nav__list-item"><a class="main-nav__link" href="#">Організація свят</a>
+                                    <li class="main-nav__list-item"><a class="main-nav__link" href="#">Про нас</a>
                     </ul>
                 </nav>
-                <a class="header__btn btn hvr-sweep-to-bottom" href="#">Квитки</a>
+                <a class="btn hvr-sweep-to-bottom" href="#">Квитки</a>
             </div>
         </header>
     </div>
