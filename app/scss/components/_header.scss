@@ -38,10 +38,6 @@
         border: none;
         border-bottom: 1px solid transparent;
         outline: none;
-        &:hover,
-        &:focus {
-            border-bottom: 1px solid $color-lilac;
-        }
     }
 
     &__search-icon {
@@ -99,12 +95,15 @@
         padding-left: 12px;
         color: $color-black;
     }
+    &__toggle-menu--js{
+        display: block;
+    }
 
     &__language-choice-list {
         display: flex;
         justify-content: space-around;
     }
-     
+
     &__language-choice-item {
         display: inline-block;
         vertical-align: middle;
@@ -116,12 +115,12 @@
         padding: 2px;
         cursor: pointer;
 
-    &:hover:not(.header__language-choice--default) {
-        background: $color-lilac;
-        padding: 2px;
-        border-radius: 5px;
-        color: $color-white;
-    }
+        &:hover:not(.header__language-choice--default) {
+            background: $color-lilac;
+            padding: 2px;
+            border-radius: 5px;
+            color: $color-white;
+        }
 
         &--default {
             display: block;

@@ -2,39 +2,32 @@ $(document).ready(function() {
 
     var
         toggleLanguage = $('.header__down-icon--js'),
-        menuLanguageChoice = $('.header__language-choice-menu--js'),
-        langugeDefault = $('.header__language-choice--default');
-        languageChosenRu = $('.header__language-choice--ru');
-        languageChosenUkr = $('.header__language-choice--ukr');
-        languageChosenEng = $('.header__language-choice--eng');
-
+        menuLanguageChoice = $('.header__language-choice-menu'),
+        menuLanguageChoiceToggle = 'header__toggle-menu--js',
+        langugeDefault = $('.header__language-choice--default'),
+        languageChosen = $('.header__language-choice');
 
 
     toggleLanguage.click(function() {
-        menuLanguageChoice.show('slow');
 
-        languageChosenRu.click(function() {
-            $(langugeDefault).text('рус');
-            menuLanguageChoice.hide('slow');
-        });
+        menuLanguageChoice.toggleClass(menuLanguageChoiceToggle);
 
-        languageChosenUkr.click(function() {
-            $(langugeDefault).text('укр');
-            menuLanguageChoice.hide('slow');
-            toggleLanguage.show('slow');
-            langugeDefault.show('slow');
+        if (menuLanguageChoice.hasClass(menuLanguageChoiceToggle)) {
 
-        });
+            languageChosen.click(function() {
 
-        languageChosenEng.click(function() {
-            $(langugeDefault).text('eng');
-            menuLanguageChoice.hide('slow');
-            toggleLanguage.show('slow');
-            langugeDefault.show('slow');
+                if ($(this).data('lang') === 'ru') {
+                    langugeDefault.text('руc');
 
-        });
+                } else if ($(this).data('lang') === 'eng') {
+                    langugeDefault.text('eng');
 
+                } else {
+                    langugeDefault.text('укр');
+                }
+            });
 
+        }
     });
 
 });
