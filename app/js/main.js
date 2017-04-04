@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var
         toggleLanguage = $('.header__down-icon--js'),
-        menuLanguageChoice = $('.header__language-choice-list--js'),
+        menuLanguageChoice = $('.header__language-choice-menu--js'),
         langugeDefault = $('.header__language-choice--default');
         languageChosenRu = $('.header__language-choice--ru');
         languageChosenUkr = $('.header__language-choice--ukr');
@@ -12,14 +12,10 @@ $(document).ready(function() {
 
     toggleLanguage.click(function() {
         menuLanguageChoice.show('slow');
-        langugeDefault.hide('slow');
-        toggleLanguage.hide('slow');
 
         languageChosenRu.click(function() {
             $(langugeDefault).text('рус');
             menuLanguageChoice.hide('slow');
-            toggleLanguage.show('slow');
-            langugeDefault.show('slow');
         });
 
         languageChosenUkr.click(function() {
