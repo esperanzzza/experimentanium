@@ -5,12 +5,14 @@ $(document).ready(function() {
         menuLanguageChoice = $('.header__language-choice-menu'),
         menuLanguageChoiceToggle = 'header__toggle-menu--js',
         langugeDefault = $('.header__language-choice--default'),
-        languageChosen = $('.header__language-choice');
+        languageChosen = $('.header__language-choice'),
+        toggleSearch = $('.header__search-icon'),
+        formSearch = $('.header__search-field');
 
 
     toggleLanguage.click(function() {
 
-        menuLanguageChoice.toggleClass(menuLanguageChoiceToggle);
+        menuLanguageChoice.addClass(menuLanguageChoiceToggle);
 
         if (menuLanguageChoice.hasClass(menuLanguageChoiceToggle)) {
 
@@ -25,9 +27,20 @@ $(document).ready(function() {
                 } else {
                     langugeDefault.text('укр');
                 }
+
+                menuLanguageChoice.removeClass(menuLanguageChoiceToggle);
+
             });
 
         }
     });
 
+    toggleSearch.click(function() {
+
+        formSearch.focus();
+
+    });
+
 });
+
+

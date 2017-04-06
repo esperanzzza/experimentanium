@@ -16,10 +16,10 @@
     <div class="background-wrapper">
         <header class="header">
             <div class="header__top">
-                <form class="header__search-form" action="/echo" method="get">
-                    <input type="search" class="header__search" name="search" id="search">
+                <form class="header__search-form" action="/echo" method="get" role="search">
+                    <input type="search" class="header__search-field" name="search" id="search">
                     <label for="search"></label>
-                    <img src="img/search-icon.svg" class="header__search-icon" alt="Search icon">
+                    <div class="header__search-icon"></div>
                 </form>
                 <div class="header__language">
                     <span class="header__language-choice header__language-choice--default">Укр</span>
@@ -31,7 +31,6 @@
                     </ul>
                     </div>
                     <div class="header__down-icon header__down-icon--js">
-                        <img src="img/down-icon.svg" alt="Down icon">
                     </div>
                 </div>
             </div>
