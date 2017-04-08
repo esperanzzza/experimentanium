@@ -1,53 +1,56 @@
-.main-nav {
+ .main-nav {
 
-    &__list {
+ &__list {
         background: $color-white;
-        padding-left: 27px;
-        padding-right: 29px;
     }
 
     &__list-item {
         position: relative;
         display: inline-block;
-        margin-right: 20px;
         font-size: 0;
-
-        &:last-child {
-            margin-right: 0;
-        }
+        margin-right: 0;
     }
 
     &__link {
         display: block;
         padding-top: 18px;
         padding-bottom: 14px;
+        padding-left: 15px;
+        padding-right: 15px;
         font-stretch: condensed;
         font-size: $font-size--base;
         text-transform: uppercase;
         color: $color-black;
 
+        &:hover {
+        background: $color-lilac;
+        }
+
         &--submenu {
             color: $color-lilac;
+
+
+        &:hover {
+        color: $color-black;
+        }
         }
     }
 
     &__submenu-one {
         position: absolute;
-        left: -21px;
+        left: 0;
+        right: 0;
         display: none;
-        width: 189px;
     }
 
     &__list > li:hover > ul {
         display: block;
         background: $color-white;
-        padding-left: 21px;
     }
 
     &__submenu-two {
         position: absolute;
         display: none;
-        width: 189px;
     }
 
     &__list > li > ul > li {
@@ -64,6 +67,9 @@
     &__list > li > ul > li:hover > ul {
         display: block;
         background: $color-white;
-        padding-left: 21px;
+    }
+
+    &__list > li > ul > li:hover > ul a {
+        width: 160px;
     }
 }
