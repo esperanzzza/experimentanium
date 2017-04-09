@@ -7,7 +7,10 @@ $(document).ready(function() {
         langugeDefault = $('.header__language-choice--default'),
         languageChosen = $('.header__language-choice'),
         toggleSearch = $('.header__search-icon'),
+        toggleSearchHide = 'header__search-icon--hide',
         formSearch = $('.header__search-field');
+        buttonSearch = $('.header__search-btn');
+        buttonSearchShow = 'header__search-btn--show';
 
 
     toggleLanguage.click(function() {
@@ -16,31 +19,23 @@ $(document).ready(function() {
 
         if (menuLanguageChoice.hasClass(menuLanguageChoiceToggle)) {
 
-            languageChosen.click(function() {
-
-                if ($(this).data('lang') === 'ru') {
-                    langugeDefault.text('руc');
-
-                } else if ($(this).data('lang') === 'eng') {
-                    langugeDefault.text('eng');
-
-                } else {
-                    langugeDefault.text('укр');
-                }
-
+            languageChosen.click(function(event) {
+                langugeDefault.text($(event.target).attr('data-lang'));
                 menuLanguageChoice.removeClass(menuLanguageChoiceToggle);
-
             });
-
-        }
+        };
     });
 
     toggleSearch.click(function() {
-
         formSearch.focus();
+        toggleSearch.addClass(toggleSearchHide);
+        buttonSearch.addClass(buttonSearchShow);
+
+        formSearch.focusout(function() {
+            buttonSearch.removeClass(buttonSearchShow);
+            toggleSearch.removeClass(toggleSearchHide);
+        });
 
     });
-
 });
-
 
