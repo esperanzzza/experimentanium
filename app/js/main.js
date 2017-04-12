@@ -17,13 +17,10 @@ $(document).ready(function() {
 
         menuLanguageChoice.addClass(menuLanguageChoiceToggle);
 
-        if (menuLanguageChoice.hasClass(menuLanguageChoiceToggle)) {
-
-            languageChosen.click(function(event) {
-                langugeDefault.text($(event.target).attr('data-lang'));
-                menuLanguageChoice.removeClass(menuLanguageChoiceToggle);
-            });
-        };
+        languageChosen.click(function(event) {
+            langugeDefault.text($(event.target).attr('data-lang'));
+            menuLanguageChoice.removeClass(menuLanguageChoiceToggle);
+        });
     });
 
     toggleSearch.click(function() {
@@ -38,4 +35,3 @@ $(document).ready(function() {
 
     });
 });
-
